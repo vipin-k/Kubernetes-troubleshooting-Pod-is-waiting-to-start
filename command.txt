@@ -1,0 +1,9 @@
+kubectl get pods -n jenkins
+kubectl logs jenkins-547dbd587f-4l66w -n jenkins
+kubectl describe pods jenkins-547dbd587f-4l66w -n jenkins
+journalctl -xeu kubelet | tail -n 10
+journalctl -xeu docker | tail -n 10
+kubectl logs jenkins-64bcbf5f89-k74nj -n jenkins -c init-config
+kubectl get pods -n jenkins
+kubectl describe pod jenkins-547dbd587f-4l66w -n jenkins
+kubectl logs jenkins-547dbd587f-4l66w -n jenkins -c copy-default-config
